@@ -1,0 +1,24 @@
+{
+  "name": "taxi-extreme",
+  "version": "1.0.0",
+  "description": "Using Backbone to create a one page multi-view app",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyleholliday/Taxi-Extreme.git"
+  },
+  "author": "kyle holliday",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyleholliday/Taxi-Extreme/issues"
+  },
+  "homepage": "https://github.com/kyleholliday/Taxi-Extreme#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-sass": "^2.2.0"
+  }
+}
