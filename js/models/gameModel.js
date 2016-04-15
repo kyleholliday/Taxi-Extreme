@@ -7,7 +7,6 @@ module.exports = Backbone.Model.extend({
         ySpot: 5,
         boardMax: 10,
         boardMin: 0,
-        vehicle: 'van',
         energy: 20,
         name: 'Billy',
         energyUsed: 1,

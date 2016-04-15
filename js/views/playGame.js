@@ -15,7 +15,6 @@ module.exports = Backbone.View.extend({
             name: this.model.get('name'),
             xSpot: this.model.get('xSpot'),
             ySpot: this.model.get('ySpot'),
-            vehicle: this.model.get('vehicle'),
             energy: this.model.get('energy'),
             energyX: this.model.get('energyX'),
             energyY: this.model.get('energyY'),

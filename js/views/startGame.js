@@ -18,16 +18,4 @@ module.exports = Backbone.View.extend({
         var name = document.getElementById('player-name').value;
         this.model.set('name', name);
     },
-    tesla: function() {
-        this.model.set('vehicle', 'Tesla');
-        this.model.set('energyUsed', 1);
-        this.model.set('energy', 10);
-        this.model.set('startingEnergy', 10);
-    },
-    rangerover: function() {
-        this.model.set('vehicle', 'Range Rover');
-        this.model.set('energyUsed', 2);
-        this.model.set('energy', 20);
-        this.model.set('startingEnergy', 20);
-    }
 });

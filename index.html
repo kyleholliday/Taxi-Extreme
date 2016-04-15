@@ -2,36 +2,35 @@
 <html>
 
 <head>
-
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
     <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="http://underscorejs.org/underscore-min.js"></script>
     <script src="http://backbonejs.org/backbone-min.js"></script>
     <script src="js/app.js"></script>
-    <title>Taxi Extreme</title>
+    <title>Highway to Hell</title>
 
     <script type="text/template" id="new-player-template">
         <div id="new-player-form">
             <input type="text" id="player-name" placeholder="Name Please" />
             <button id="create-player">Play</button>
-            <input value="tesla" id="tesla" type="radio" name="name">Tesla</input>
-            <input value="rangerover" id="rangerover" type="radio" name="name">Range Rover</input>
         </div>
     </script>
     <script type="text/template" id="play-game-template">
-        <h2>Go!</h2>
-        <h3 id="status"><%= name %> is in the <%= vehicle %> at (<%= xSpot %>, <%= ySpot %>). You have <%= energy %> energy.</h3>
+        <h2 id="status">Driver Name: <%= name %> </h2>
+        <h3>Location: (<%= xSpot %>, <%= ySpot %>)</h3>
+        <h3>You have <%= energy %> passengers</h3>
         <button id="left-button">Left</button>
         <button id="right-button">Right</button>
         <button id="down-button">Down</button>
         <button id="up-button">Up</button>
-        <h3>The next energy pod is located at (<%= energyX %>, <%= energyY %>).</h3>
-        <h3>You have currently collected <%= podNumber %> pods.</h3>
+        <h3>The next passenger is located at (<%= energyX %>, <%= energyY %>).</h3>
+        <h3>You have currently collected <%= podNumber %> passengers.</h3>
     </script>
 
 </head>
 
 <body>
-    <h1>Taxi Extreme</h1>
+    <h1>Highway to Hell</h1>
     <h2><a href = "#/new">New</a></h2>
     <h2><a href = "#/play">Play</a></h2>
     <main id="content">
