@@ -24,23 +24,28 @@ a {
     text-align: center;
     transition: all ease 0.3s;
     font-size: 25px;
-    display: block;
+    @include span-columns(2);
+    @include shift(5);
 }
 a:hover {
     color: rgb(246, 224, 192);
 }
 input[type="text"] {
-    font-size: 1.3em;
+    font-size: 20px;
     height: 45px;
     width: 250px;
     border: 3px solid rgb(66, 66, 66);
     border-radius: 3px;
     background-color: rgb(246, 224, 192);
-    margin-top: 1.7%;
+    margin-top: 20px;
     padding-left: 1.5%;
     font-weight: bold;
     color: rgb(66, 66, 66);
     font-family: 'Carter One', cursive;
+}
+#create-player {
+    margin: 0;
+    height: 45px;
 }
 h6 {
     margin-top: 3px;
@@ -81,11 +86,13 @@ button:hover {
     text-align: center;
 }
 #new-player-form {
+    @include span-columns(4);
+    @include shift(4);
     text-align: center;
     padding: 0;
 }
 .space {
-    border: 2px solid rgb(246,224, 192);
+    border: 3px solid rgb(246,224, 192);
     width: 30px;
     height: 30px;
     display: inline-block;

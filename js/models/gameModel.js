@@ -18,7 +18,6 @@ module.exports = Backbone.Model.extend({
     using: function() {
         this.set('energy', this.get('energy') - this.get('energyUsed'));
     },
-
     goUp: function() {
         if (this.get('ySpot') < this.get('boardMax')) {
             this.set('ySpot', this.get('ySpot') + 1);
