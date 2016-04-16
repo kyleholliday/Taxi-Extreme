@@ -3,8 +3,8 @@ module.exports = Backbone.Model.extend({
         this.name = null;
     },
     defaults: {
-        xSpot: 5,
-        ySpot: 5,
+        xSpot: Math.round(Math.random() * 10),
+        ySpot: Math.round(Math.random() * 10),
         boardMax: 10,
         boardMin: 0,
         energy: 20,
@@ -53,7 +53,7 @@ module.exports = Backbone.Model.extend({
     },
     energyBoost: function() {
         this.set('podNumber', this.get('podNumber') + 1);
-        this.set('energy', this.get('energy') + 10);
+        this.set('energy', this.get('energy') + 9);
         this.podMover();
     },
     podMover: function() {

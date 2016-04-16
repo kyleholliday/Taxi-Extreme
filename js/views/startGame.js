@@ -17,5 +17,8 @@ module.exports = Backbone.View.extend({
     newCharacter: function() {
         var name = document.getElementById('player-name').value;
         this.model.set('name', name);
+        Backbone.history.navigate('play', {
+            trigger: true
+        });
     },
 });

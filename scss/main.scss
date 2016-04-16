@@ -3,13 +3,91 @@
 html {
     background-color: rgb(207, 90, 66);
     color: rgb(246, 224, 192);
+    font-family: 'Carter One', cursive;
+}
+body {
     @include outer-container;
+}
+h1 {
+    font-size: 68px;
+    margin-bottom: 0;
+    margin-top: 15px;
+    text-align: center;
+}
+h2 {
+    margin-bottom: 15px;
+    margin-top: 13px;
 }
 a {
     color: rgb(66, 66, 66);
-}
-body {
-    @include span-columns(6);
-    @include shift(3);
+    text-decoration: none;
     text-align: center;
+    transition: all ease 0.3s;
+    font-size: 25px;
+    display: block;
+}
+a:hover {
+    color: rgb(246, 224, 192);
+}
+input[type="text"] {
+    font-size: 1.3em;
+    height: 45px;
+    width: 250px;
+    border: 3px solid rgb(66, 66, 66);
+    border-radius: 3px;
+    background-color: rgb(246, 224, 192);
+    margin-top: 1.7%;
+    padding-left: 1.5%;
+    font-weight: bold;
+    color: rgb(66, 66, 66);
+    font-family: 'Carter One', cursive;
+}
+h6 {
+    margin-top: 3px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+span {
+    color: rgb(246, 224, 192);
+    color: white;
+    font-size: 27px;
+}
+button {
+    font-weight: 200px;
+    font-family: 'Carter One', cursive;
+    margin: 0.7%;
+    color: rgb(246, 224, 192);
+    cursor: pointer;
+    background-color: rgb(66, 66, 66);
+    font-size: 20px;
+    height: 45px;
+    width: 80px;
+    text-align: center;
+    border: 3px solid rgb(246, 224, 192);
+    transition: all ease 0.3s;
+    border-radius: 3px;
+}
+button:hover {
+    background-color: rgb(246,224, 192);
+    color: rgb(66, 66, 66);
+}
+#grid {
+    @include span-columns(4);
+    padding: 0;
+    margin-left: 7%;
+}
+#left {
+    @include span-columns(6);
+    text-align: center;
+}
+#new-player-form {
+    text-align: center;
+    padding: 0;
+}
+.space {
+    border: 2px solid rgb(246,224, 192);
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 3px;
 }

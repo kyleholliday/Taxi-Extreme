@@ -1,6 +1,19 @@
 module.exports = Backbone.View.extend({
     initialize: function() {
         this.model.on('change:xSpot change:ySpot change:energy change:energyX change:energyY', this.render, this);
+        var self = this;
+        Mousetrap.bind('up', function() {
+            self.goUp();
+        });
+        Mousetrap.bind('down', function() {
+            self.goDown();
+        });
+        Mousetrap.bind('left', function() {
+            self.goLeft();
+        });
+        Mousetrap.bind('right', function() {
+            self.goRight();
+        });
     },
     events: {
         'click #up-button': 'goUp',
@@ -23,7 +36,16 @@ module.exports = Backbone.View.extend({
         this.el.innerHTML = page;
         //GAME OVER
         if (this.model.get('energy') === 0) {
-            alert('GAME OVER - NO MORE ENERGY');
+            alert('GAME OVER - NO MORE FUEL');
+        }
+        var theGrid = document.getElementById('grid');
+        for (var j = 9; j >= 0; j--) {
+            for (var i = 0; i < 10; i++) {
+                var div = document.createElement('div');
+                div.setAttribute('id', 'space-' + i + '-' + j);
+                div.classList.add('space');
+                theGrid.appendChild(div);
+            }
         }
     },
     goUp: function() {

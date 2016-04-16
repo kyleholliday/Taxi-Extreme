@@ -13,7 +13,6 @@ module.exports = Backbone.Router.extend({
     routes: {
         'new': 'newCharacter',
         'play': 'playGame',
-        '': 'newCharacter'
     },
     //When the user clicks new - the following happens
     newCharacter: function() {
