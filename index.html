@@ -18,14 +18,14 @@
         </div>
     </script>
     <script type="text/template" id="game-over-template">
-        <h2><blink> Game Over! </blink></h2>
-        <h3>Name:
-            <%= name %>
-        </h3>
-        <h3>Score:
-             <%= score %>
-        </h3>
-        <h3>Click New Game to play again.</h3>
+        <h1>Game Over!</h1>
+        <h2>Name:
+            <span><%= name %></span>
+        </h2>
+        <h2>Score:
+             <span><%= score %></span>
+        </h2>
+        <h2>Click New Game to play again.</h2>
     </script>
     <script type="text/template" id="play-game-template">
         <div id="left">
@@ -38,7 +38,7 @@
             <button id="down-button">Down</button>
             <button id="up-button">Up</button>
             <h6 id="intructions">Use the buttons above or your keyboard keys</h6>
-            <h2>You have currently collected <span><%= podNumber %></span> passengers.</h2>
+            <h2>You have currently collected <span id="energyP"><%= podNumber %></span> passengers.</h2>
             <div id="progressbar"></div>
         </div>
         <div id="grid"></div>
