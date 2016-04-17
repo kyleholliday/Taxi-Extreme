@@ -17,18 +17,28 @@
             <button id="create-player">Play</button>
         </div>
     </script>
+    <script type="text/template" id="game-over-template">
+        <h2> Game Over! </h2>
+        <h3>Name:
+            <%= name %>
+        </h3>
+        <h3>Score:
+             <%= score %>
+        </h3>
+        <h3>Click to play again.</h3>
+    </script>
     <script type="text/template" id="play-game-template">
         <div id="left">
             <h2 id="status">Driver Name: <span><%= name %></span> </h2>
-            <h2>Location: <span><%= xSpot %> , <%= ySpot %></span></h2>
-            <h2>The next passenger is at:  <span><%= energyX %> , <%= energyY %></span></h2>
+            <!-- <h2>Location: <span><%= xSpot %> , <%= ySpot %></span></h2>
+            <h2>The next passenger is at:  <span><%= energyX %> , <%= energyY %></span></h2> -->
             <h2>You have <span><%= energy %></span> fuel</h2>
             <button id="left-button">Left</button>
             <button id="right-button">Right</button>
             <button id="down-button">Down</button>
             <button id="up-button">Up</button>
             <h6 id="intructions">Use the buttons above or your keyboard keys</h6>
-            <h2>You have currently collected <span><%= podNumber %></span> passengers</h2>
+            <h2>You have currently collected <span><%= podNumber %></span> souls.</h2>
         </div>
         <div id="grid"></div>
     </script>
@@ -40,6 +50,7 @@
     <a href="#/new">New Game</a>
     <div id="new-player-section"></div>
     <div id="play-game-section"></div>
+    <div id="game-over-section"></div>
 
 </body>
 

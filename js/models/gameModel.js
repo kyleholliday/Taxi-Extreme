@@ -3,17 +3,18 @@ module.exports = Backbone.Model.extend({
         this.name = null;
     },
     defaults: {
-        xSpot: Math.round(Math.random() * 10),
-        ySpot: Math.round(Math.random() * 10),
-        boardMax: 10,
+        xSpot: Math.round(Math.random() * 9),
+        ySpot: Math.round(Math.random() * 9),
+        boardMax: 9,
         boardMin: 0,
         energy: 20,
         name: 'Billy',
         energyUsed: 1,
         startingEnergy: 10,
         podNumber: 0,
-        energyX: Math.round(Math.random() * 10),
-        energyY: Math.round(Math.random() * 10),
+        energyX: Math.round(Math.random() * 9),
+        energyY: Math.round(Math.random() * 9),
+        score: 0,
     },
     using: function() {
         this.set('energy', this.get('energy') - this.get('energyUsed'));
@@ -56,7 +57,27 @@ module.exports = Backbone.Model.extend({
         this.podMover();
     },
     podMover: function() {
-        this.set('energyX', Math.round(Math.random() * 10));
-        this.set('energyY', Math.round(Math.random() * 10));
-    }
+        this.set('energyX', Math.round(Math.random() * 9));
+        this.set('energyY', Math.round(Math.random() * 9));
+    },
+    playOne: function() {
+        var startSpot = document.getElementById('play-block');
+        if (startSpot !== null) {
+            startSpot.removeAttribute('id', 'play-block');
+        }
+        var playerOne = document.getElementById('space-' + this.get('xSpot') + '-' + this.get('ySpot'));
+        if (playerOne !== null) {
+            playerOne.setAttribute('id', 'play-block');
+        }
+    },
+    riderBox: function() {
+        var startSpot = document.getElementById('rider-block');
+        if (startSpot !== null) {
+            startSpot.removeAttribute('id', 'rider-block');
+        }
+        var rider = document.getElementById('space-' + this.get('energyX') + '-' + this.get('energyY'));
+        if (rider !== null) {
+            rider.setAttribute('id', 'rider-block');
+        }
+    },
 });

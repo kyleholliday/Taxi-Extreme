@@ -36,7 +36,9 @@ module.exports = Backbone.View.extend({
         this.el.innerHTML = page;
         //GAME OVER
         if (this.model.get('energy') === 0) {
-            alert('GAME OVER - NO MORE FUEL');
+            Backbone.history.navigate('gameover', {
+                trigger: true
+            });
         }
         var theGrid = document.getElementById('grid');
         for (var j = 9; j >= 0; j--) {
@@ -47,6 +49,8 @@ module.exports = Backbone.View.extend({
                 theGrid.appendChild(div);
             }
         }
+        this.model.playOne();
+        this.model.riderBox();
     },
     goUp: function() {
         this.model.goUp();
