@@ -15,8 +15,7 @@ module.exports = Backbone.View.extend({
         this.el.innerHTML = game;
     },
     new: function() {
-        window.location.reload();
         Backbone.history.navigate('#/new');
-
+        window.location.reload();
     },
 });

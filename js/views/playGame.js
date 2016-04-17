@@ -1,17 +1,17 @@
 module.exports = Backbone.View.extend({
-    initialize: function() {
+    initialize: function () {
         this.model.on('change:xSpot change:ySpot change:energy change:energyX change:energyY', this.render, this);
         var self = this;
-        Mousetrap.bind('up', function() {
+        Mousetrap.bind('up', function () {
             self.goUp();
         });
-        Mousetrap.bind('down', function() {
+        Mousetrap.bind('down', function () {
             self.goDown();
         });
-        Mousetrap.bind('left', function() {
+        Mousetrap.bind('left', function () {
             self.goLeft();
         });
-        Mousetrap.bind('right', function() {
+        Mousetrap.bind('right', function () {
             self.goRight();
         });
     },
@@ -23,7 +23,7 @@ module.exports = Backbone.View.extend({
     },
     template: _.template(document.getElementById('play-game-template').textContent),
 
-    render: function() {
+    render: function () {
         var page = this.template({
             name: this.model.get('name'),
             xSpot: this.model.get('xSpot'),
@@ -52,25 +52,25 @@ module.exports = Backbone.View.extend({
         this.model.playOne();
         this.model.riderBox();
     },
-    goUp: function() {
+    goUp: function () {
         this.model.goUp();
         if (this.model.get('xSpot') === this.model.get('energyX') && this.model.get('ySpot') === this.model.get('energyY')) {
             this.model.energyBoost();
         }
     },
-    goDown: function() {
+    goDown: function () {
         this.model.goDown();
         if (this.model.get('xSpot') === this.model.get('energyX') && this.model.get('ySpot') === this.model.get('energyY')) {
             this.model.energyBoost();
         }
     },
-    goLeft: function() {
+    goLeft: function () {
         this.model.goLeft();
         if (this.model.get('xSpot') === this.model.get('energyX') && this.model.get('ySpot') === this.model.get('energyY')) {
             this.model.energyBoost();
         }
     },
-    goRight: function() {
+    goRight: function () {
         this.model.goRight();
         if (this.model.get('xSpot') === this.model.get('energyX') && this.model.get('ySpot') === this.model.get('energyY')) {
             this.model.energyBoost();

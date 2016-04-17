@@ -25,7 +25,7 @@
         <h3>Score:
              <%= score %>
         </h3>
-        <h3>Click to play again.</h3>
+        <h3>Click New Game to play again.</h3>
     </script>
     <script type="text/template" id="play-game-template">
         <div id="left">
@@ -38,7 +38,8 @@
             <button id="down-button">Down</button>
             <button id="up-button">Up</button>
             <h6 id="intructions">Use the buttons above or your keyboard keys</h6>
-            <h2>You have currently collected <span><%= podNumber %></span> souls.</h2>
+            <h2>You have currently collected <span><%= podNumber %></span> passengers.</h2>
+            <div id="progressbar"></div>
         </div>
         <div id="grid"></div>
     </script>
